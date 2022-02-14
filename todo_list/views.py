@@ -43,13 +43,3 @@ def delete(request, id):
         task.delete()
     return redirect('index')
 
-def prueba(request):
-    tasks = Task.objects.order_by('id')
-    if request.method == 'POST':
-        formaTask = TaskForm(request.POST)
-        if formaTask.is_valid():
-            formaTask.save()
-            return redirect('index')
-    else:
-        formaTask = TaskForm()
-    return render(request, 'bienvenido-prueba.html', {'formaTask':formaTask, 'tasks':tasks})

@@ -24,5 +24,4 @@ urlpatterns = [
     path('new/', new),
     path('edit/<int:id>', edit),
     path('delete/<int:id>', delete),
-    path('prueba', prueba)
 ]
