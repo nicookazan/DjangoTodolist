@@ -1,0 +1,20 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
+    <title>Creación</title>
+</head>
+<body class="pad">
+<form action="" method="POST">
+    <table>
+        {{ formaTask }}
+    </table>
+    <br>
+    <button type="submit" class="button">Crear Task</button>
+    <a href="{% url 'index' %}" class="button"> Volver al inicio</a>
+    {% csrf_token %}
+</form>
+</body>
+</html>
